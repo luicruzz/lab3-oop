@@ -3,7 +3,7 @@
  * Name: Luis D. Cruz Medina
  * Lab: Lab 3 - Object-Oriented Programming, Part 1
  * Description: Class skeletons - restaurant case design
- * Due date: [Date]
+ * Due date: [3/9/2026]
  */
 
 #include <iostream>
