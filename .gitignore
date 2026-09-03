@@ -12,5 +12,6 @@ array_pointer
 # Archivos objeto intermedios (si tu compilador los genera)
 *.o
 
+
 # Carpeta de configuración del editor (opcional, común excluirla)
 .vscode/
