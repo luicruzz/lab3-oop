@@ -1,9 +1,9 @@
 /*
  * Course: COEN 2220 - Programming 2
- * Name: [
+ * Name: [Luis Cruz]
  * Lab: Lab 3 - Object-Oriented Programming, Part 1
  * Description: Guided example - the Book class
- * Due date: [Date]
+ * Due date: [3/9/2026]
  */
 
 #include <iostream>
@@ -110,7 +110,7 @@ int main() {
     b1.setTitle("Clean Code (2nd Edition)");
     b1.setAuthor("");   // empty string - should be REJECTED
     b1.printInfo();
-    
+
     // --- STEP 3 main() code goes here later ---
 
     cout << "\n--- Checking out ---\n";
