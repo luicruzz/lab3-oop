@@ -33,6 +33,16 @@ class Student
             if (!n.empty())
                 name = n;
         }
+
+        // TODO (Parte C): setId(int i)
+        // Solo asigna si i es positivo.
+        void setId(int i) {
+            if (i > 0)
+                id = i;
+            else
+                cout << "Error: ID must be positive.\n";
+        }
+
         // TODO (Parte C): setGpa(double g)
         // Solo asigna si g esta entre 0.0 y 4.0 (inclusive).
         // Si no es valido, imprime un mensaje de error y no cambia el valor.
@@ -43,14 +53,6 @@ class Student
                 cout << "Error: GPA must be between 0.0 and 4.0.\n";
         }
 
-        // TODO (Parte C): setId(int i)
-        // Solo asigna si i es positivo.
-        void setId(int i) {
-            if (i > 0)
-                id = i;
-            else
-                cout << "Error: ID must be positive.\n";
-        }
 
         // TODO (Parte C): Getters con const: getName(), getId(), getGpa()
         string getName() const { return name; }
@@ -69,7 +71,11 @@ class Student
         // ===== No los toques todavia - les toca mas adelante =====
 
         // TODO (Parte D): Constructor with parameters (name, id, gpa).
-
+        Student(string n, int i, double g) {
+            setName(n);
+            setId(i);
+            setGpa(g);
+        }
         // TODO (Parte E): Destructor.
         // Imprime un mensaje indicando que el objeto Student con ese 'name' fue destruido.
 };
@@ -92,6 +98,8 @@ int main() {
 
     // TODO (Parte D): Crea un segundo Student usando el constructor con
     // parametros, con datos dummy (ej. "Alice Smith", 1001, 3.7).
+    Student s2("Alice Smith", 1001, 3.7);
+    s2.printInfo();
 
     return 0;
 }
