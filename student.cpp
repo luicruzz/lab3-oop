@@ -22,18 +22,49 @@ class Student
 
         // TODO (Parte C): Default constructor.
         // Inicializa name a "", id a 0, gpa a 0.0
-
+        Student() {
+            name = "";
+            id = 0;
+            gpa = 0.0;
+        }
         // TODO (Parte C): setName(string n)
         // Solo asigna si n no esta vacio.
-
+        void setName(string n) {
+            if (!n.empty())
+                name = n;
+        }
         // TODO (Parte C): setGpa(double g)
         // Solo asigna si g esta entre 0.0 y 4.0 (inclusive).
         // Si no es valido, imprime un mensaje de error y no cambia el valor.
+        void setGpa(double g) {
+            if (g >= 0.0 && g <= 4.0)
+                gpa = g;
+            else
+                cout << "Error: GPA must be between 0.0 and 4.0.\n";
+        }
+
+        // TODO (Parte C): setId(int i)
+        // Solo asigna si i es positivo.
+        void setId(int i) {
+            if (i > 0)
+                id = i;
+            else
+                cout << "Error: ID must be positive.\n";
+        }
 
         // TODO (Parte C): Getters con const: getName(), getId(), getGpa()
+        string getName() const { return name; }
+        int getId() const { return id; }
+        double getGpa() const { return gpa; }
 
         // TODO (Parte C): printInfo() const
         // Imprime name, id, y gpa con formato similar a Book::printInfo()
+
+        void printInfo() const {
+            cout << "Name: " << name << "\n"
+                 << "ID: " << id << "\n"
+                 << "GPA: " << gpa << "\n";
+        }
 
         // ===== No los toques todavia - les toca mas adelante =====
 
@@ -48,6 +79,11 @@ int main() {
 
     // TODO (Parte C): Crea un Student usando el constructor default,
     // asigna valores con los setters, e imprime con printInfo().
+    Student s1;
+    s1.setName("John Doe");
+    s1.setId(1000);
+    s1.setGpa(5.0); // Valid GPA
+    s1.printInfo();
 
     // TODO (Parte C): Prueba setGpa() con un valor invalido (ej. 5.0)
     // y confirma que el mensaje de error aparece y el gpa no cambia.
